@@ -10,41 +10,52 @@ This repository is my public learning journal. It contains the concepts I study,
 
 **Primary goal:** design, deploy, automate, secure, and monitor reliable cloud applications — not just complete courses or collect certificates.
 
-**Learning pace:** around 8 hours per week, alongside my studies.  
+**Learning pace:** around 8 hours per week, alongside my studies (estimated ~40 weeks — see the [schedule](./00-roadmap/)).  
 **Learning approach:** understand → practice → document → repeat without a tutorial.
+
+## The common thread: one application, end to end
+
+Every lab works on the same small application: the **[Tasks API](./app/)**, a Python / FastAPI REST API with PostgreSQL.  
+The app is intentionally simple, so the effort goes into **operating** it rather than writing it:
+
+```text
+local run → Docker → CI/CD → AWS (ECR + ECS + RDS) → Terraform → security gates → Kubernetes → monitoring
+```
 
 ## Learning roadmap
 
-Progress is tracked with checkboxes. A checked item means I have completed the corresponding lab or learning milestone.
+Each module has its own README with **labs and checkpoints**. A checkbox is ticked only when the checkpoint is actually completed.
 
-| Module                              | Main topics                                   | Progress   |
-| ----------------------------------- | --------------------------------------------- | ---------- |
-| [00 · Roadmap](./00-roadmap/)       | Goals, weekly plans, learning reviews         | ⬜ Planned |
-| [01 · Linux](./01-linux/)           | CLI, users, permissions, processes, SSH, Bash | ⬜ Planned |
-| [02 · Networking](./02-networking/) | TCP/IP, DNS, HTTP(S), ports, firewalls        | ⬜ Planned |
-| [03 · Docker](./03-docker/)         | Images, containers, volumes, Compose          | ⬜ Planned |
-| [04 · CI/CD](./04-cicd/)            | GitHub Actions, tests, build, deployment      | ⬜ Planned |
-| [05 · AWS](./05-aws/)               | IAM, EC2, S3, VPC, CloudWatch, ECS            | ⬜ Planned |
-| [06 · Terraform](./06-terraform/)   | Infrastructure as Code, state, modules        | ⬜ Planned |
-| [07 · Kubernetes](./07-kubernetes/) | Pods, Deployments, Services, Helm             | ⬜ Planned |
-| [08 · Monitoring](./08-monitoring/) | Logs, metrics, alerts, Prometheus, Grafana    | ⬜ Planned |
-| [09 · Projects](./09-projects/)     | End-to-end portfolio projects                 | ⬜ Planned |
+| Module                                         | Main topics                                              | Estimate | Progress   |
+| ---------------------------------------------- | -------------------------------------------------------- | -------- | ---------- |
+| [00 · Roadmap](./00-roadmap/)                  | Goals, schedule, weekly reviews                          | —        | ⬜ Planned |
+| [01 · Linux](./01-linux/)                      | CLI, users, permissions, systemd, SSH, Bash              | 3 weeks  | ⬜ Planned |
+| [02 · Networking](./02-networking/)            | TCP/IP, CIDR, DNS, HTTP(S), TLS, reverse proxy, firewall | 2 weeks  | ⬜ Planned |
+| [03 · Docker](./03-docker/)                    | Dockerfile, images, volumes, Compose, image scanning     | 3 weeks  | ⬜ Planned |
+| [04 · CI/CD](./04-cicd/)                       | GitHub Actions, tests, build, registry, environments     | 3 weeks  | ⬜ Planned |
+| [05 · AWS](./05-aws/)                          | IAM, VPC, EC2, S3, RDS, ECR, ECS Fargate, CloudWatch     | 8 weeks  | ⬜ Planned |
+| [06 · Infrastructure as Code](./06-iac/)       | Terraform, remote state, modules, IaC in CI, Ansible     | 6 weeks  | ⬜ Planned |
+| [07 · Security](./07-security/)                | Least privilege, OIDC, secrets, SBOM, scanning           | 3 weeks  | ⬜ Planned |
+| [08 · Kubernetes](./08-kubernetes/)            | Workloads, probes, HPA, Ingress, Helm, Argo CD, EKS      | 8 weeks  | ⬜ Planned |
+| [09 · Monitoring](./09-monitoring/)            | Logs, Prometheus, Grafana, SLOs, alerts, OpenTelemetry   | 4 weeks  | ⬜ Planned |
+| [10 · Projects](./10-projects/)                | End-to-end portfolio projects                            | ongoing  | ⬜ Planned |
 
 > **Note:** All milestones are initially marked _Planned_. I update them only when the work is actually completed.
 
 ## 🛠️ Tech stack I'm learning
 
-| Area                       | Tools and technologies                 |
-| -------------------------- | -------------------------------------- |
-| Operating systems          | Linux (Ubuntu), Bash, SSH              |
-| Version control            | Git, GitHub                            |
-| Containers                 | Docker, Docker Compose                 |
-| CI/CD                      | GitHub Actions                         |
-| Cloud                      | Amazon Web Services (AWS)              |
-| Infrastructure as Code     | Terraform                              |
-| Orchestration              | Kubernetes, Helm                       |
-| Observability              | Amazon CloudWatch, Prometheus, Grafana |
-| Applications used for labs | PHP / CodeIgniter, REST APIs, MySQL    |
+| Area                   | Tools and technologies                                   |
+| ---------------------- | -------------------------------------------------------- |
+| Operating systems      | Linux (Ubuntu), Bash, SSH, systemd                       |
+| Version control        | Git, GitHub                                              |
+| Containers             | Docker, Docker Compose                                   |
+| CI/CD                  | GitHub Actions                                           |
+| Cloud                  | Amazon Web Services (AWS)                                |
+| Infrastructure as Code | Terraform / OpenTofu, Ansible                            |
+| Security               | IAM, OIDC, Secrets Manager, Trivy, Checkov, gitleaks     |
+| Orchestration          | Kubernetes, Helm, Argo CD                                |
+| Observability          | Amazon CloudWatch, Prometheus, Grafana, OpenTelemetry    |
+| Lab application        | Python, FastAPI, PostgreSQL                              |
 
 The list above describes the **learning scope**, not technologies I claim to have mastered.
 
@@ -52,48 +63,39 @@ The list above describes the **learning scope**, not technologies I claim to hav
 
 ```text
 cloud-devops-journey/
-├── 00-roadmap/       # Goals, schedules, weekly reviews
+├── 00-roadmap/       # Goals, schedule, weekly reviews
 ├── 01-linux/         # Linux notes, labs, Bash scripts
 ├── 02-networking/    # Networking fundamentals and exercises
 ├── 03-docker/        # Dockerfiles and Compose labs
 ├── 04-cicd/          # CI/CD pipelines and GitHub Actions
 ├── 05-aws/           # Cloud infrastructure and AWS labs
-├── 06-terraform/     # Infrastructure as Code
-├── 07-kubernetes/    # Kubernetes manifests and labs
-├── 08-monitoring/    # Monitoring and observability
-├── 09-projects/      # End-to-end projects
+├── 06-iac/           # Terraform and Ansible
+├── 07-security/      # DevSecOps
+├── 08-kubernetes/    # Kubernetes manifests, Helm, GitOps
+├── 09-monitoring/    # Monitoring and observability
+├── 10-projects/      # End-to-end projects
+├── app/              # Tasks API — the application used in every lab
 └── README.md
 ```
 
-Each module is intended to include:
+Each module contains:
 
-- `README.md` — objectives, topics, and module progress;
+- `README.md` — objectives, labs, **checkpoints** and the "module done when" criteria;
 - `notes/` — concise explanations in my own words;
-- `labs/` — reproducible exercises with commands and results;
+- `labs/` — reproducible exercises with commands and results (one file per lab, e.g. `labs/03.2-dockerfile.md`);
 - `scripts/` or configuration files — when relevant;
 - `cheatsheet.md` — useful commands and quick references, when needed.
 
 ## Planned portfolio projects
 
-### Project 1 — Containerized backend application
+The projects build on each other — see [10 · Projects](./10-projects/) for full checkpoints.
 
-Containerize a **Java SpingBoot API** using Docker Compose. Include persistent storage, environment configuration, health checks, and clear setup instructions.
+1. **Containerised Tasks API** — Dockerfile, Compose stack with PostgreSQL, health checks, image scanning.
+2. **Automated deployment to AWS** — GitHub Actions → ECR → ECS Fargate + RDS, OIDC, documented rollback.
+3. **IaC, security and observability** — Project 2 rewritten in Terraform, security gates in CI, dashboards, alerts and a postmortem.
+4. **Kubernetes and GitOps (stretch)** — Helm chart on EKS, deployed by Argo CD.
 
-**Demonstrates:** Docker fundamentals, networking, debugging, and documentation.
-
-### Project 2 — Automated AWS deployment
-
-Build a CI/CD pipeline with **GitHub Actions**, publish a Docker image to **Amazon ECR**, and deploy the application to **Amazon ECS**. Manage permissions securely and document deployment and rollback steps.
-
-**Demonstrates:** AWS, CI/CD, IAM, containers, and deployment automation.
-
-### Project 3 — Infrastructure as Code and observability
-
-Provision infrastructure with **Terraform**, deploy a sample workload, and add logging, metrics, and alerts. Practice troubleshooting and cost cleanup.
-
-**Demonstrates:** Infrastructure as Code, monitoring, security, and operations.
-
-> These are **planned projects**, not completed work. Finished projects will link to their own folders and include architecture diagrams, setup instructions, and evidence of testing.
+> These are **planned projects**, not completed work. Finished projects will include architecture diagrams, setup instructions, and evidence of testing.
 
 ## How I document each lab
 
@@ -114,7 +116,8 @@ Every lab should answer these questions:
 - [ ] Dockerize and run a multi-service application.
 - [ ] Build a test-and-deploy CI/CD pipeline.
 - [ ] Deploy and secure an application on AWS.
-- [ ] Provision cloud resources with Terraform.
+- [ ] Provision and manage cloud infrastructure with Terraform, from a pipeline.
+- [ ] Remove every long-lived secret from code and CI.
 - [ ] Deploy and troubleshoot a Kubernetes workload.
 - [ ] Configure logs, metrics, alerts, and basic incident diagnostics.
 - [ ] Publish at least one documented, end-to-end portfolio project.
@@ -123,6 +126,8 @@ Every lab should answer these questions:
 
 - **Optional fundamentals:** AWS Certified Cloud Practitioner.
 - **Primary target:** AWS Certified CloudOps Engineer – Associate, once my hands-on skills are ready.
+- **Optional:** HashiCorp Terraform Associate, CKAD.
+- **Long-term goal:** AWS Certified DevOps Engineer – Professional.
 
 Certifications will be marked as earned **only after passing the official exam**.
 
@@ -134,12 +139,15 @@ Certifications will be marked as earned **only after passing the official exam**
 - [AWS Skill Builder](https://skillbuilder.aws/)
 - [AWS documentation](https://docs.aws.amazon.com/)
 - [Terraform tutorials](https://developer.hashicorp.com/terraform/tutorials)
+- [Ansible documentation](https://docs.ansible.com/)
 - [Kubernetes tutorials](https://kubernetes.io/docs/tutorials/)
 - [Prometheus documentation](https://prometheus.io/docs/)
 
 ## Security and cost awareness
 
-This is a learning repository. I will **never commit credentials, private keys, `.env` files containing secrets, or AWS access keys**. I will use safe credential handling, follow least-privilege principles, monitor AWS costs, and remove temporary lab resources after use.
+This is a learning repository. I will **never commit credentials, private keys, `.env` files containing secrets, or AWS access keys**. CI authenticates to AWS with **OIDC** instead of stored keys, secrets live in AWS Secrets Manager, and a secret scanner runs before every commit.
+
+On the cost side: an **AWS Budget alert** is set before the first lab, Kubernetes is practised locally before EKS, and every lab ends with a documented **teardown** (`terraform destroy` or manual cleanup).
 
 ---
 
