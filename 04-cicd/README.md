@@ -2,11 +2,17 @@
 
 **Estimate:** 3 weeks · **Tool:** GitHub Actions · **Application:** [Tasks API](../app/)
 
-## Objectives
+## 🎯 Objectives
 
-- Every push is automatically linted, tested and built.
-- Every merge to `main` produces a versioned, scanned Docker image.
-- Understand deployment strategies and rollback.
+By the end of this module, I can:
+
+- Explain workflows, jobs, runners and triggers in GitHub Actions
+- Run lint and tests automatically on every push and pull request
+- Build, tag, scan and publish a Docker image from CI
+- Use environments, secrets and manual approvals for deployments
+- Explain rolling, blue/green and canary deployments, and write a rollback procedure
+
+**Prerequisites:** [03 · Docker](../03-docker/)
 
 ## Labs and checkpoints
 
@@ -44,6 +50,8 @@
 - [ ] A pull request shows lint + tests + scan results automatically
 - [ ] A merge to `main` publishes a tagged image with zero manual steps
 
-## Resources
+## Free courses and labs
 
+- [GitHub Skills](https://skills.github.com/) — free interactive courses that run inside your own repository (**main resource**: start with the Actions courses)
 - [GitHub Actions documentation](https://docs.github.com/en/actions)
+- [GitHub Actions certification course (freeCodeCamp)](https://www.freecodecamp.org/news/pass-the-github-actions-certification-exam/) — full free video course

@@ -2,11 +2,17 @@
 
 **Estimate:** 2 weeks
 
-## Objectives
+## 🎯 Objectives
 
-- Explain how a request travels from a browser to an application.
-- Design IP ranges for a cloud network.
-- Troubleshoot connectivity methodically.
+By the end of this module, I can:
+
+- Explain how a request travels from a browser to an application, layer by layer
+- Calculate subnets in CIDR notation and plan a VPC address range
+- Explain DNS resolution, HTTP and TLS, and inspect them with `dig`, `curl` and `openssl`
+- Put a reverse proxy (Nginx) with HTTPS in front of an application
+- Configure a host firewall and troubleshoot connectivity methodically
+
+**Prerequisites:** [01 · Linux](../01-linux/)
 
 ## Labs and checkpoints
 
@@ -44,7 +50,10 @@
 - [ ] I can explain, without notes, what happens when I type a URL and press Enter
 - [ ] I can plan a VPC address range with public and private subnets
 
-## Resources
+## Free courses and labs
 
-- [Cloudflare Learning Center](https://www.cloudflare.com/learning/)
+- [Cloudflare Learning Center](https://www.cloudflare.com/learning/) — DNS, HTTP, TLS, CDN explained simply (**main resource**)
+- [Professor Messer — Network+ videos](https://www.professormesser.com/) — free full networking course
+- [Cisco Networking Academy](https://www.netacad.com/) — free networking basics courses with Packet Tracer labs
+- [Subnetting Practice](https://subnettingpractice.com/) — CIDR drills until it is automatic
 - [MDN — HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)

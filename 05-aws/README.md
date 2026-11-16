@@ -2,13 +2,20 @@
 
 **Estimate:** 8 weeks · **Application:** [Tasks API](../app/)
 
+## 🎯 Objectives
+
+By the end of this module, I can:
+
+- Set up an AWS account safely: MFA, SSO, budget alerts
+- Apply least privilege with IAM roles and policies
+- Design a VPC with public and private subnets across two Availability Zones
+- Deploy the Tasks API on **ECS Fargate** behind an ALB, with **RDS PostgreSQL** and Secrets Manager
+- Send logs to CloudWatch and alarm on errors
+- Keep costs under control and clean up every resource
+
+**Prerequisites:** [03 · Docker](../03-docker/), [04 · CI/CD](../04-cicd/)
+
 > **Rule for this module:** build each service once in the **console** to understand it, then rebuild it with the **CLI**. In module 06, everything is rebuilt with Terraform.
-
-## Objectives
-
-- Deploy the Tasks API on AWS with a production-like architecture.
-- Apply least privilege with IAM.
-- Keep costs under control.
 
 ## Labs and checkpoints
 
@@ -65,8 +72,12 @@
 - [ ] An architecture diagram is in `notes/`
 - [ ] Total cost of the module documented
 
-## Resources
+## Free courses and labs
 
-- [AWS Skill Builder](https://skillbuilder.aws/)
-- [AWS documentation](https://docs.aws.amazon.com/)
+- [AWS Skill Builder](https://skillbuilder.aws/) — free digital courses, start with *AWS Cloud Practitioner Essentials* (**main resource**)
+- [AWS Cloud Quest: Cloud Practitioner](https://aws.amazon.com/training/digital/aws-cloud-quest/) — free 3D game with real labs in an AWS sandbox (no bill)
+- [AWS Educate](https://aws.amazon.com/education/awseducate/) — free learning paths and labs for students
+- [AWS Workshops](https://workshops.aws/) — hundreds of free official step-by-step workshops (ECS, VPC, IAM…)
+- [Amazon ECS Workshop](https://ecsworkshop.com/) — for lab 05.5
 - [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
+- [AWS documentation](https://docs.aws.amazon.com/)

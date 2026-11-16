@@ -2,11 +2,17 @@
 
 **Estimate:** 3 weeks · **Application:** [Tasks API](../app/)
 
-## Objectives
+## 🎯 Objectives
 
-- Package the Tasks API into a small, secure, reproducible image.
-- Run a multi-service stack (API + PostgreSQL) with Docker Compose.
-- Debug containers confidently.
+By the end of this module, I can:
+
+- Explain images, containers, layers and registries, and how containers use namespaces and cgroups
+- Write a small, secure, multi-stage Dockerfile that runs as a non-root user
+- Run a multi-service stack (API + PostgreSQL) with Docker Compose, with persistent data
+- Configure an application through environment variables without committing secrets
+- Debug a failing container and scan an image for vulnerabilities
+
+**Prerequisites:** [01 · Linux](../01-linux/), [02 · Networking](../02-networking/)
 
 ## Labs and checkpoints
 
@@ -49,7 +55,10 @@
 - [ ] `docker compose up` starts the full stack from a clean clone with one command
 - [ ] Setup steps documented in [`app/README.md`](../app/README.md)
 
-## Resources
+## Free courses and labs
 
-- [Docker documentation](https://docs.docker.com/get-started/)
+- [Docker — Get started](https://docs.docker.com/get-started/) — official guide (**main resource**)
 - [Dockerfile best practices](https://docs.docker.com/build/building/best-practices/)
+- [Play with Docker](https://labs.play-with-docker.com/) — free Docker environment in the browser
+- [iximiuz Labs](https://labs.iximiuz.com/) — hands-on challenges on containers and how they work under the hood (free tier)
+- [TechWorld with Nana (YouTube)](https://www.youtube.com/@TechWorldwithNana) — clear Docker and DevOps videos

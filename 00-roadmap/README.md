@@ -2,10 +2,19 @@
 
 Goals, schedule and weekly reviews. This folder keeps the journey honest: what was planned, what was done, what slipped.
 
+## 🎯 Objectives
+
+By the end of this journey, I can:
+
+- Take an application from a laptop to production on AWS, fully automated and described in code
+- Secure it end to end, with no long-lived secrets
+- Operate it: observe it, get alerted, respond to incidents and learn from them
+- Prove all of this with a public, documented portfolio and an AWS certification
+
 ## Pace
 
 - **~8 hours per week**, alongside my studies.
-- Estimated total: **~40 weeks** (about 9–10 months) for modules 01 → 09, plus the projects.
+- Estimated total: **~42 weeks** (about 10 months) for modules 01 → 09, plus the projects.
 - Estimates are a guide, not a deadline. If a module takes longer, I note why in the weekly review.
 
 ## Schedule (estimate)
@@ -20,7 +29,7 @@ Goals, schedule and weekly reviews. This folder keeps the journey honest: what w
 | [06 · Infrastructure as Code](../06-iac/)    | 6 weeks   | 20 – 25  |
 | [07 · Security](../07-security/)             | 3 weeks   | 26 – 28  |
 | [08 · Kubernetes](../08-kubernetes/)         | 8 weeks   | 29 – 36  |
-| [09 · Monitoring](../09-monitoring/)         | 4 weeks   | 37 – 40  |
+| [09 · Observability & incidents](../09-monitoring/) | 6 weeks | 37 – 42 |
 | [10 · Projects](../10-projects/)             | continuous | built along the way |
 
 ## Certification plan
@@ -52,6 +61,13 @@ Create one file per week in [`weekly/`](./weekly/), named `YYYY-Www.md` (e.g. `2
 ## Next week
 - Lab 01.3 — processes and systemd
 ```
+
+## General free resources
+
+- [roadmap.sh — DevOps](https://roadmap.sh/devops) — visual map of the field
+- [90DaysOfDevOps](https://github.com/MichaelCade/90DaysOfDevOps) — free community course covering the whole path
+- [DevOps Exercises](https://github.com/bregman-arie/devops-exercises) — interview questions and exercises per topic
+- Each module README lists its own **free courses and labs**.
 
 ## Checkpoints
 

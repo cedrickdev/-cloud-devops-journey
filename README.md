@@ -10,7 +10,7 @@ This repository is my public learning journal. It contains the concepts I study,
 
 **Primary goal:** design, deploy, automate, secure, and monitor reliable cloud applications — not just complete courses or collect certificates.
 
-**Learning pace:** around 8 hours per week, alongside my studies (estimated ~40 weeks — see the [schedule](./00-roadmap/)).  
+**Learning pace:** around 8 hours per week, alongside my studies (estimated ~42 weeks — see the [schedule](./00-roadmap/)).  
 **Learning approach:** understand → practice → document → repeat without a tutorial.
 
 ## The common thread: one application, end to end
@@ -19,7 +19,7 @@ Every lab works on the same small application: the **[Tasks API](./app/)**, a Py
 The app is intentionally simple, so the effort goes into **operating** it rather than writing it:
 
 ```text
-local run → Docker → CI/CD → AWS (ECR + ECS + RDS) → Terraform → security gates → Kubernetes → monitoring
+local run → Docker → CI/CD → AWS (ECR + ECS + RDS) → Terraform → security gates → Kubernetes → observability → incidents
 ```
 
 ## Learning roadmap
@@ -37,7 +37,7 @@ Each module has its own README with **labs and checkpoints**. A checkbox is tick
 | [06 · Infrastructure as Code](./06-iac/)       | Terraform, remote state, modules, IaC in CI, Ansible     | 6 weeks  | ⬜ Planned |
 | [07 · Security](./07-security/)                | Least privilege, OIDC, secrets, SBOM, scanning           | 3 weeks  | ⬜ Planned |
 | [08 · Kubernetes](./08-kubernetes/)            | Workloads, probes, HPA, Ingress, Helm, Argo CD, EKS      | 8 weeks  | ⬜ Planned |
-| [09 · Monitoring](./09-monitoring/)            | Logs, Prometheus, Grafana, SLOs, alerts, OpenTelemetry   | 4 weeks  | ⬜ Planned |
+| [09 · Observability & incidents](./09-monitoring/) | Loki, Prometheus, Grafana, Tempo, SLOs, alerting, runbooks, incident response, postmortems | 6 weeks  | ⬜ Planned |
 | [10 · Projects](./10-projects/)                | End-to-end portfolio projects                            | ongoing  | ⬜ Planned |
 
 > **Note:** All milestones are initially marked _Planned_. I update them only when the work is actually completed.
@@ -54,7 +54,8 @@ Each module has its own README with **labs and checkpoints**. A checkbox is tick
 | Infrastructure as Code | Terraform / OpenTofu, Ansible                            |
 | Security               | IAM, OIDC, Secrets Manager, Trivy, Checkov, gitleaks     |
 | Orchestration          | Kubernetes, Helm, Argo CD                                |
-| Observability          | Amazon CloudWatch, Prometheus, Grafana, OpenTelemetry    |
+| Observability          | Prometheus, Grafana, Loki, Tempo, Alertmanager, OpenTelemetry, Amazon CloudWatch |
+| Incident management    | SLOs and error budgets, runbooks, game days, blameless postmortems |
 | Lab application        | Python, FastAPI, PostgreSQL                              |
 
 The list above describes the **learning scope**, not technologies I claim to have mastered.
@@ -72,7 +73,7 @@ cloud-devops-journey/
 ├── 06-iac/           # Terraform and Ansible
 ├── 07-security/      # DevSecOps
 ├── 08-kubernetes/    # Kubernetes manifests, Helm, GitOps
-├── 09-monitoring/    # Monitoring and observability
+├── 09-monitoring/    # Observability, runbooks, incidents and postmortems
 ├── 10-projects/      # End-to-end projects
 ├── app/              # Tasks API — the application used in every lab
 └── README.md
@@ -92,7 +93,7 @@ The projects build on each other — see [10 · Projects](./10-projects/) for fu
 
 1. **Containerised Tasks API** — Dockerfile, Compose stack with PostgreSQL, health checks, image scanning.
 2. **Automated deployment to AWS** — GitHub Actions → ECR → ECS Fargate + RDS, OIDC, documented rollback.
-3. **IaC, security and observability** — Project 2 rewritten in Terraform, security gates in CI, dashboards, alerts and a postmortem.
+3. **IaC, security and observability** — Project 2 rewritten in Terraform, security gates in CI, Grafana/Loki/Prometheus stack, SLO alerts, runbooks, game days and postmortems.
 4. **Kubernetes and GitOps (stretch)** — Helm chart on EKS, deployed by Argo CD.
 
 > These are **planned projects**, not completed work. Finished projects will include architecture diagrams, setup instructions, and evidence of testing.
@@ -119,7 +120,8 @@ Every lab should answer these questions:
 - [ ] Provision and manage cloud infrastructure with Terraform, from a pipeline.
 - [ ] Remove every long-lived secret from code and CI.
 - [ ] Deploy and troubleshoot a Kubernetes workload.
-- [ ] Configure logs, metrics, alerts, and basic incident diagnostics.
+- [ ] Collect logs, metrics and traces, and alert on SLOs.
+- [ ] Respond to an incident with a runbook and publish a blameless postmortem.
 - [ ] Publish at least one documented, end-to-end portfolio project.
 
 ## Certifications (planned)
@@ -142,6 +144,8 @@ Certifications will be marked as earned **only after passing the official exam**
 - [Ansible documentation](https://docs.ansible.com/)
 - [Kubernetes tutorials](https://kubernetes.io/docs/tutorials/)
 - [Prometheus documentation](https://prometheus.io/docs/)
+- [Grafana documentation](https://grafana.com/docs/) (Grafana, Loki, Tempo)
+- [Google SRE book](https://sre.google/sre-book/table-of-contents/)
 
 ## Security and cost awareness
 

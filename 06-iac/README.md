@@ -2,12 +2,18 @@
 
 **Estimate:** 6 weeks · **Tools:** Terraform (or OpenTofu), Ansible
 
-## Objectives
+## 🎯 Objectives
 
-- Rebuild the module 05 architecture **entirely in code**, reproducibly.
-- Manage Terraform state safely for teamwork.
-- Run Terraform through a CI pipeline, not from my laptop.
-- Configure servers declaratively with Ansible.
+By the end of this module, I can:
+
+- Describe AWS infrastructure in Terraform (or OpenTofu) and run the plan/apply/destroy cycle
+- Manage state safely: remote backend, locking, import and drift
+- Write reusable modules and deploy several environments from the same code
+- Run Terraform from a CI pipeline with OIDC, reviews and approvals
+- Configure servers idempotently with Ansible playbooks and roles
+- Compare Terraform with CloudFormation, CDK and Pulumi
+
+**Prerequisites:** [05 · AWS](../05-aws/)
 
 ## Labs and checkpoints
 
@@ -62,8 +68,11 @@
 - [ ] The full Tasks API infrastructure can be destroyed and recreated with one pipeline run
 - [ ] No resource exists in AWS that is not described in code
 
-## Resources
+## Free courses and labs
 
-- [Terraform tutorials](https://developer.hashicorp.com/terraform/tutorials)
+- [HashiCorp Terraform tutorials — AWS track](https://developer.hashicorp.com/terraform/tutorials/aws-get-started) — official and free (**main resource**)
+- [Getting Started with OpenTofu (LFEL1009)](https://training.linuxfoundation.org/resources/) — free Linux Foundation course (search "OpenTofu")
+- [Terraform Best Practices](https://www.terraform-best-practices.com/) — free ebook on structure, naming, modules
+- [Ansible — Getting started](https://docs.ansible.com/ansible/latest/getting_started/index.html)
+- [Red Hat interactive labs — Ansible](https://www.redhat.com/en/interactive-labs/ansible) — free browser labs (Red Hat account)
 - [OpenTofu documentation](https://opentofu.org/docs/)
-- [Ansible documentation](https://docs.ansible.com/)

@@ -2,13 +2,20 @@
 
 **Estimate:** 3 weeks · **Application:** [Tasks API](../app/)
 
+## 🎯 Objectives
+
+By the end of this module, I can:
+
+- Remove every long-lived secret from code, CI and laptops (OIDC, Secrets Manager, rotation)
+- Apply and audit least privilege for every human and machine identity
+- Secure the supply chain: SBOM, image signing, pinned dependencies
+- Run automated security checks in CI: secrets, code, dependencies, IaC, DAST
+- Protect data at rest and in transit, and enable AWS threat detection
+- Write a threat model for an application
+
+**Prerequisites:** [04 · CI/CD](../04-cicd/), [05 · AWS](../05-aws/), [06 · IaC](../06-iac/)
+
 > Security is also practised in every module. This module reviews the whole chain end to end and fills the gaps.
-
-## Objectives
-
-- No long-lived secrets anywhere: in code, in CI or on laptops.
-- Least privilege for every identity, human or machine.
-- Security checks run automatically in the pipeline.
 
 ## Labs and checkpoints
 
@@ -47,7 +54,10 @@
 - [ ] A threat model of the Tasks API (one page) is written in `notes/`
 - [ ] The pipeline fails automatically on a leaked secret, a critical CVE or an insecure Terraform change
 
-## Resources
+## Free courses and labs
 
+- [flAWS](http://flaws.cloud/) and [flAWS 2](http://flaws2.cloud/) — free AWS security challenges (S3, IAM, metadata, Lambda) — attacker and defender paths (**main lab**)
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [AWS Security documentation](https://docs.aws.amazon.com/security/)
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) — vulnerable app to practise ZAP scans (lab 07.4)
+- [AWS Workshops](https://workshops.aws/) — filter by *Security* for IAM, GuardDuty and secrets workshops
+- [Trivy documentation](https://trivy.dev/) · [Checkov](https://www.checkov.io/) · [gitleaks](https://github.com/gitleaks/gitleaks) · [Sigstore cosign](https://docs.sigstore.dev/)

@@ -2,6 +2,12 @@
 
 Portfolio projects built on the [Tasks API](../app/). Each project **reuses and extends the previous one**, so the repository tells one story: from a local app to a production-grade, observable platform.
 
+## 🎯 Objectives
+
+- Apply each group of modules on a realistic, end-to-end case instead of isolated labs
+- Build one coherent story that a recruiter can follow in a few minutes
+- Show evidence (diagrams, pipeline runs, dashboards, postmortems), not just claims
+
 Each finished project gets its own folder with:
 
 - an architecture diagram;
@@ -36,27 +42,38 @@ Each finished project gets its own folder with:
 
 **Demonstrates:** AWS, CI/CD, IAM, containers, deployment automation.
 
-## Project 3 — Infrastructure as Code, security and observability
+## Project 3 — Infrastructure as Code and security
 
-**After modules:** 06 – 07, 09
+**After modules:** 06 – 07
 
-Takes the Project 2 infrastructure and **rewrites it entirely in Terraform**, then makes it secure and observable.
+Takes the Project 2 infrastructure and **rewrites it entirely in Terraform**, then secures the whole delivery chain.
 
 - [ ] All Project 2 infrastructure in Terraform, with remote state and `dev` / `prod` environments
 - [ ] `terraform plan` on pull requests, `apply` after approval
-- [ ] Security gates in CI: secrets, CVEs, IaC misconfigurations
-- [ ] Logs, metrics, dashboard, SLO-based alert
-- [ ] One simulated incident with a postmortem
+- [ ] Security gates in CI: secrets, CVEs, IaC misconfigurations, signed images
 - [ ] Full stack destroyed and recreated from the pipeline
 
-**Demonstrates:** Infrastructure as Code, DevSecOps, monitoring, operations.
+**Demonstrates:** Infrastructure as Code, GitOps-style workflows for infrastructure, DevSecOps.
 
-## Project 4 (stretch) — Kubernetes and GitOps
+## Project 4 — Kubernetes and GitOps
 
 **After module:** 08
 
-- [ ] Tasks API on EKS, packaged with Helm
-- [ ] Deployed by Argo CD from Git
+- [ ] Tasks API packaged as a Helm chart
+- [ ] Deployed on EKS (provisioned with the Project 3 Terraform code) by Argo CD
 - [ ] Autoscaling, network policies, least-privilege service accounts
 
 **Demonstrates:** Kubernetes, Helm, GitOps, cloud-native operations.
+
+## Project 5 — Observability and incident response (capstone)
+
+**After module:** 09
+
+Makes the platform from Projects 3 – 4 observable and operable, then proves it under failure.
+
+- [ ] Observability stack: Loki (logs), Prometheus (metrics), Tempo (traces), Grafana dashboards as code
+- [ ] SLO-based alerts routed by Alertmanager, each linked to a runbook
+- [ ] At least 3 game days (DB down, bad deploy, latency) with blameless postmortems
+- [ ] At least 2 postmortem action items implemented and linked
+
+**Demonstrates:** observability, SRE practices, incident response.

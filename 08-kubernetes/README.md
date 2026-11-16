@@ -2,13 +2,21 @@
 
 **Estimate:** 8 weeks · **Application:** [Tasks API](../app/)
 
+## 🎯 Objectives
+
+By the end of this module, I can:
+
+- Explain the Kubernetes architecture and its core objects
+- Deploy, configure, scale and update an application with Deployments, Services, ConfigMaps and Secrets
+- Configure health probes, resource limits and autoscaling
+- Expose and secure workloads with Ingress, NetworkPolicies and RBAC
+- Package an application with Helm and deploy it the GitOps way with Argo CD
+- Run a workload on Amazon EKS provisioned with Terraform
+- Troubleshoot failing pods quickly
+
+**Prerequisites:** [03 · Docker](../03-docker/), [06 · IaC](../06-iac/)
+
 > **Cost rule:** labs 08.1 → 08.5 run **locally** (kind or k3d). EKS is only used in lab 08.6, and destroyed right after.
-
-## Objectives
-
-- Deploy and operate the Tasks API on Kubernetes.
-- Package it with Helm and deploy it the GitOps way.
-- Troubleshoot failing workloads.
 
 ## Labs and checkpoints
 
@@ -60,8 +68,11 @@
 - [ ] A Git commit is the only thing needed to deploy a new version
 - [ ] I can fix a broken deployment without searching online
 
-## Resources
+## Free courses and labs
 
-- [Kubernetes tutorials](https://kubernetes.io/docs/tutorials/)
-- [Helm documentation](https://helm.sh/docs/)
-- [Argo CD documentation](https://argo-cd.readthedocs.io/)
+- [Introduction to Kubernetes (LFS158)](https://training.linuxfoundation.org/training/introduction-to-kubernetes/) — free Linux Foundation course (**main course**)
+- [Kubernetes tutorials](https://kubernetes.io/docs/tutorials/) — official
+- [Killercoda — Kubernetes](https://killercoda.com/kubernetes) and [CKAD scenarios](https://killercoda.com/killer-shell-ckad) — free browser clusters, exam-style exercises
+- [Amazon EKS Workshop](https://www.eksworkshop.com/) — official free labs for lab 08.6
+- [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way) — optional, to understand every component
+- [Helm documentation](https://helm.sh/docs/) · [Argo CD getting started](https://argo-cd.readthedocs.io/en/stable/getting_started/)

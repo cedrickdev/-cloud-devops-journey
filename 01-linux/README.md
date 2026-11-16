@@ -2,11 +2,18 @@
 
 **Estimate:** 3 weeks · **Environment:** Ubuntu Server (VM via Multipass/UTM, or a cheap cloud VM)
 
-## Objectives
+## 🎯 Objectives
 
-- Administer a Linux server from the terminal only.
-- Manage users, permissions, processes, services and logs.
-- Connect securely over SSH and automate routine tasks with Bash.
+By the end of this module, I can:
+
+- Navigate and manage the filesystem using only the terminal
+- Manage users, groups and permissions, and explain setuid, setgid and the sticky bit
+- Inspect processes and run an application as a **systemd service** with logs in journald
+- Connect securely with SSH keys and harden an SSH server
+- Write robust Bash scripts and schedule them (cron or systemd timers)
+- Diagnose disk, memory and port problems on a server
+
+**Prerequisites:** none — this is the starting point.
 
 ## Labs and checkpoints
 
@@ -51,7 +58,11 @@
 - [ ] I can set up a fresh server, deploy the Tasks API as a service and secure SSH **without notes**
 - [ ] `cheatsheet.md` written in my own words
 
-## Resources
+## Free courses and labs
 
-- [Ubuntu Server documentation](https://documentation.ubuntu.com/server/)
-- `man` pages — always first
+- [Linux Upskill Challenge](https://linuxupskillchallenge.org/) — free month-long course: administer a remote Ubuntu server from the command line (**main course for this module**)
+- [Introduction to Linux (LFS101)](https://training.linuxfoundation.org/training/introduction-to-linux/) — Linux Foundation, free
+- [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/) — terminal game to drill commands, permissions and SSH
+- [Linux Journey](https://linuxjourney.com/) — short interactive lessons
+- [The Linux Command Line (free book)](https://linuxcommand.org/tlcl.php) — reference for Bash and scripting
+- [Killercoda playgrounds](https://killercoda.com/playgrounds) — a free Ubuntu VM in the browser
