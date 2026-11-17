@@ -19,44 +19,44 @@ By the end of this module, I can:
 
 ### Lab 01.1 — Terminal and filesystem
 
-- [ ] Navigate the filesystem hierarchy and explain `/etc`, `/var`, `/home`, `/opt`, `/tmp`
-- [ ] Use `find`, `grep`, `less`, `head`, `tail -f`, pipes and redirections
-- [ ] Edit files with `vim` or `nano` without leaving the terminal
+- [x] Navigate the filesystem hierarchy and explain `/etc`, `/var`, `/home`, `/opt`, `/tmp`
+- [x] Use `find`, `grep`, `less`, `head`, `tail -f`, pipes and redirections
+- [x] Edit files with `vim` or `nano` without leaving the terminal
 
 ### Lab 01.2 — Users, groups and permissions
 
-- [ ] Create users and groups, add a user to `sudo`
-- [ ] Explain and set `rwx`, octal modes, `chown`, `chmod`
-- [ ] Explain setuid, setgid and the sticky bit with one example each
+- [x] Create users and groups, add a user to `sudo`
+- [x] Explain and set `rwx`, octal modes, `chown`, `chmod`
+- [x] Explain setuid, setgid and the sticky bit with one example each
 
 ### Lab 01.3 — Processes, services and logs
 
-- [ ] Inspect processes with `ps`, `top`/`htop`, send signals with `kill`
-- [ ] Create a **systemd service** that runs the [Tasks API](../app/) and restarts on failure
-- [ ] Read service logs with `journalctl -u <service> -f`
+- [x] Inspect processes with `ps`, `top`/`htop`, send signals with `kill`
+- [x] Create a **systemd service** that runs the [Tasks API](../app/) and restarts on failure
+- [x] Read service logs with `journalctl -u <service> -f`
 
 ### Lab 01.4 — Packages, disks and resources
 
-- [ ] Install and remove packages with `apt`
-- [ ] Check disk usage (`df`, `du`) and memory (`free`)
-- [ ] Find which process listens on a port (`ss -tulpn`)
+- [x] Install and remove packages with `apt`
+- [x] Check disk usage (`df`, `du`) and memory (`free`)
+- [x] Find which process listens on a port (`ss -tulpn`)
 
 ### Lab 01.5 — SSH
 
-- [ ] Generate an SSH key pair and log in with key authentication
-- [ ] Disable password and root login in `sshd_config`
-- [ ] Use `~/.ssh/config` and copy files with `scp` or `rsync`
+- [x] Generate an SSH key pair and log in with key authentication
+- [x] Disable password and root login in `sshd_config`
+- [x] Use `~/.ssh/config` and copy files with `scp` or `rsync`
 
 ### Lab 01.6 — Bash scripting
 
-- [ ] Write a script with variables, conditions, loops and functions
-- [ ] Handle errors with `set -euo pipefail` and exit codes
-- [ ] Write a **backup script** (archive + rotation) and schedule it with `cron` or a systemd timer
+- [x] Write a script with variables, conditions, loops and functions
+- [x] Handle errors with `set -euo pipefail` and exit codes
+- [x] Write a **backup script** (archive + rotation) and schedule it with `cron` or a systemd timer
 
 ## Module done when
 
-- [ ] I can set up a fresh server, deploy the Tasks API as a service and secure SSH **without notes**
-- [ ] `cheatsheet.md` written in my own words
+- [x] I can set up a fresh server, deploy the Tasks API as a service and secure SSH **without notes**
+- [x] `cheatsheet.md` written in my own words
 
 ## Free courses and labs
 
